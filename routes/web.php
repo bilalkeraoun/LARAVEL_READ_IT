@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('template.index');
-});
+// Route par défaut
+Route::get('/', [App\Http\Controllers\PostsController::class, 'index'])
+    ->name('homepage');
+
+Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index'])
+    ->name('posts.index');
+
+Route::get('/posts/{post}/{slug}', [\App\Http\Controllers\PostsController::class, 'show'])
+    ->name('posts.show');
 
 
