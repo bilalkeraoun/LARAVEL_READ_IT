@@ -13,6 +13,5 @@
         <input type="hidden" name="postId" value="4" />
         <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
       </div>
-
     </form>
 </div>
