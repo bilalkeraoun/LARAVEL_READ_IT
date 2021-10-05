@@ -13,6 +13,7 @@
 
   {{ $post->content }}
 
+  {{-- Tags du post --}}
   @include('tags._index', ['tags' => $post->tags])
   
   {{-- Author du post --}}
@@ -21,5 +22,9 @@
   {{-- Comments du post --}}
   @include('comments._index', ['comments' => $post->comments])
 
-  
+  {{-- Formfulaire du post --}}
+  @include('comments._add-form')
+
+
+   
 @endsection
