@@ -20,6 +20,8 @@ Route::get('/', [App\Http\Controllers\PostsController::class, 'index'])
 Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index'])
     ->name('posts.index');
 
+
+// Route d'un détail d'un post
 Route::get('/posts/{post}/{slug}', [\App\Http\Controllers\PostsController::class, 'show'])
     ->name('posts.show');
 
