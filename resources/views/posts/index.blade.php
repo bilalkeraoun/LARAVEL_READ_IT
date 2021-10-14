@@ -29,7 +29,7 @@
                 .addClass('fadeInUp')
                 .addClass('ftco-animated');
                 offset = offset + 10;
-            })
+            });
     });
       
   </script>

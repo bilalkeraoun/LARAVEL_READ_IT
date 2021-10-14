@@ -28,3 +28,25 @@
 
    
 @endsection
+
+@section('scripts')
+    <script>
+
+      $('#addComment').submit(function(e) {
+        e.preventDefault();
+        $.get( $(this).attr('action'), {
+          pseudo:  $('#pseudo').val(),
+          content: $('#content').val(),
+          postID:  $('#postID').val()
+
+        })
+          .done(function (rep) {
+            $('.comment-list').append(rep)
+                                .find('li:last-of-type')
+                                .hide()
+                                .slideDown();
+          });
+      });
+
+    </script>
+@endsection

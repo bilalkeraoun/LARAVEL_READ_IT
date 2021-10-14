@@ -25,4 +25,5 @@ class PostsController extends Controller
                         ->get();
         return view('posts._list', compact('posts'));
     }
+
 }

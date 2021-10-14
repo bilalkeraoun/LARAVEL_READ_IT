@@ -34,3 +34,6 @@ Route::get('/ajax', function() {
 Route::get('/ajax/posts', [\App\Http\Controllers\PostsController::class, 'more'])
     ->name('ajax.posts.more');
 
+// Route d'un détail d'un post
+Route::get('/comments/add', [\App\Http\Controllers\CommentsController::class, 'add'])
+->name('ajax.comments.add');
