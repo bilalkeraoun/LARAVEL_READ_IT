@@ -37,3 +37,8 @@ Route::get('/ajax/posts', [\App\Http\Controllers\PostsController::class, 'more']
 // Route d'un détail d'un post
 Route::get('/comments/add', [\App\Http\Controllers\CommentsController::class, 'add'])
 ->name('ajax.comments.add');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
